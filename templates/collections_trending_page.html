@@ -1,0 +1,75 @@
+<!-- Tabs -->
+<div class="flex flex-row justify-between">
+  <div role="tablist" class="tabs tabs-lifted max-w-md">
+    <a
+      hx-get="/?collections=true"
+      hx-target="#landing_page_container"
+      hx-swap="innerHTML"
+      role="tab"
+      class="tab {% if collections_list %}tab-active{% endif %}"
+      >Collections</a
+    >
+    <a
+      hx-get="/?trending=true"
+      hx-target="#landing_page_container"
+      hx-swap="innerHTML"
+      role="tab"
+      class="tab {% if trending_list %}tab-active{% endif %}"
+      >Trending</a
+    >
+  </div>
+  <button
+    class="{% if not trending_list %}invisible{% endif %} btn btn-neutral"
+  >
+    Filter
+  </button>
+  <!-- Only visible when Trending tab is active -->
+</div>
+
+<div class="mt-3">
+  <!-- Collections -->
+  {% if collections_list %}
+  <div class="grid grid-cols-3 gap-8">
+    <!-- Collection Card -->
+    {% for coll in collections_list %}
+    <div class="card bg-neutral">
+      <div class="card-body">
+        <h2 class="card-title">{{ coll.title }}</h2>
+
+        <div class="flex flex-row justify-between">
+          <figure class="flex flex-row justify-start">
+            {% for dp in coll.reddits_dp[:4] %}
+            <img src="{{ dp }}" alt="car!" class="w-10 h-10 rounded-full" />
+            {% endfor %}
+          </figure>
+
+          <div class="card-actions justify-end">
+            <button class="btn btn-secondary">Expand</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Trending -->
+  {% elif trending_list %}
+  <div>
+    <table class="table w-full table-zebra">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Subreddit name</th>
+          <th># Users</th>
+          <th>Growth over day</th>
+          <th>Growth over week</th>
+          <th>Growth over month</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% include "trending_table.html" %}
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+</div>

@@ -1,0 +1,51 @@
+{% extends "default.html" %} {% block container %}
+
+<div class="container mx-auto max-w-5xl w-full">
+  <div class="grid grid-cols-3 gap-10 w-full">
+    <div class="col-span-1 justify-self-end">
+      <div class="avatar">
+        <div class="w-12 rounded-full">
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-rows-3 gap-7">
+      <div>
+        <label class="input input-bordered flex items-center gap-2">
+          Name
+          <input
+            type="text cursor-not-allowed"
+            class="grow text-neutral-content"
+            value="Daisy"
+            disabled
+          />
+        </label>
+      </div>
+      <div>
+        <label class="input input-bordered flex items-center gap-2">
+          Email
+          <input
+            type="email cursor-not-allowed"
+            class="grow text-neutral-content"
+            value="daisy@ui.com"
+            disabled
+          />
+        </label>
+      </div>
+      <div>
+        <label class="input input-bordered flex items-center gap-2">
+          Plan
+          <input
+            type="text cursor-not-allowed"
+            class="grow text-neutral-content"
+            value="Free"
+            disabled
+          />
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

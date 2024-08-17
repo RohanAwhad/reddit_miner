@@ -1,0 +1,93 @@
+<html data-theme="dracula">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar bg-base-100">
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl">daisyUI</a>
+      </div>
+      <div class="flex-none gap-2">
+        <div class="dropdown dropdown-end">
+          <div
+            tabindex="0"
+            role="button"
+            class="btn btn-ghost btn-circle avatar"
+          >
+            <div class="w-10 rounded-full">
+              <img
+                alt="Tailwind CSS Navbar component"
+                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+              />
+            </div>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+          >
+            <li>
+              <a class="justify-between"> Profile </a>
+            </li>
+            <li><a>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Container -->
+    <div class="container mx-auto max-w-5xl w-full">
+      <div class="grid grid-cols-3 gap-10 w-full">
+        <div class="col-span-1 justify-self-end">
+          <div class="avatar">
+            <div class="w-12 rounded-full">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-rows-3 gap-7">
+          <div>
+            <label class="input input-bordered flex items-center gap-2">
+              Name
+              <input
+                type="text cursor-not-allowed"
+                class="grow text-neutral-content"
+                value="Daisy"
+                disabled
+              />
+            </label>
+          </div>
+          <div>
+            <label class="input input-bordered flex items-center gap-2">
+              Email
+              <input
+                type="email cursor-not-allowed"
+                class="grow text-neutral-content"
+                value="daisy@ui.com"
+                disabled
+              />
+            </label>
+          </div>
+          <div>
+            <label class="input input-bordered flex items-center gap-2">
+              Plan
+              <input
+                type="text cursor-not-allowed"
+                class="grow text-neutral-content"
+                value="Free"
+                disabled
+              />
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

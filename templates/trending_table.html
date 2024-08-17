@@ -1,0 +1,31 @@
+{% for item in trending_list %} {% if loop.last and page != -1 %}
+<tr
+  hx-get="/?trending=true&page={{page}}"
+  hx-swap="afterend"
+  hx-trigger="revealed once"
+>
+  {% else %}
+</tr>
+
+<tr>
+  {% endif %}
+
+  <td><input type="checkbox" /></td>
+  <td>r/{{ item.display_name }}</td>
+  <td>{{ item.curr_subscriber_count }}</td>
+
+  {% if item.growth_in_day >= 0 %}
+  <td class="text-success">+{{ item.growth_in_day }}%</td>
+  {% else %}
+  <td class="text-error">-{{ item.growth_in_day }}%</td>
+  {% endif %} {% if item.growth_in_week >= 0 %}
+  <td class="text-success">+{{ item.growth_in_week }}%</td>
+  {% else %}
+  <td class="text-error">-{{ item.growth_in_week }}%</td>
+  {% endif %} {% if item.growth_in_month >= 0 %}
+  <td class="text-success">+{{ item.growth_in_month }}%</td>
+  {% else %}
+  <td class="text-error">-{{ item.growth_in_month }}%</td>
+  {% endif %}
+</tr>
+{% endfor %}

@@ -1,6 +1,10 @@
-<html data-theme='dracula'>
+<html data-theme="dracula">
   <head>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
@@ -11,20 +15,24 @@
       </div>
       <div class="flex-none gap-2">
         <div class="dropdown dropdown-end">
-          <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+          <div
+            tabindex="0"
+            role="button"
+            class="btn btn-ghost btn-circle avatar"
+          >
             <div class="w-10 rounded-full">
               <img
                 alt="Tailwind CSS Navbar component"
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+              />
             </div>
           </div>
           <ul
             tabindex="0"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+          >
             <li>
-              <a class="justify-between">
-                Profile
-              </a>
+              <a class="justify-between"> Profile </a>
             </li>
             <li><a>Logout</a></li>
           </ul>
@@ -33,27 +41,26 @@
     </div>
 
     <!-- Container -->
-    <div class='container mx-auto max-w-5xl w-full'>
-
+    <div class="container mx-auto max-w-5xl w-full">
       <!-- Tabs -->
-      <div class='flex flex-row justify-between'>
+      <div class="flex flex-row justify-between">
         <div role="tablist" class="tabs tabs-lifted max-w-md">
           <a role="tab" class="tab tab-active">Collections</a>
           <a role="tab" class="tab">Trending</a>
         </div>
-        <button class='invisible btn btn-neutral'>Filter</button>  <!-- Only visible when Trending tab is active --> 
+        <button class="invisible btn btn-neutral">Filter</button>
+        <!-- Only visible when Trending tab is active -->
       </div>
 
-      <div class='mt-3'>
+      <div class="mt-3">
         <!-- Collections -->
-        <div class='grid grid-cols-3 gap-8'>
-
+        <div class="grid grid-cols-3 gap-8">
           <!-- Collection Card -->
           <div class="card bg-neutral">
             <div class="card-body">
               <h2 class="card-title">Life hacks Collection</h2>
 
-              <div class='flex flex-row justify-between'>
+              <div class="flex flex-row justify-between">
                 <figure class="flex flex-row justify-start">
                   <img
                     src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
@@ -84,14 +91,12 @@
             </div>
           </div>
 
-
-
           <!-- Collection Card -->
           <div class="card bg-neutral">
             <div class="card-body">
               <h2 class="card-title">Life hacks Collection</h2>
 
-              <div class='flex flex-row justify-between'>
+              <div class="flex flex-row justify-between">
                 <figure class="flex flex-row justify-start">
                   <img
                     src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
@@ -122,14 +127,12 @@
             </div>
           </div>
 
-
-
           <!-- Collection Card -->
           <div class="card bg-neutral">
             <div class="card-body">
               <h2 class="card-title">Life hacks Collection</h2>
 
-              <div class='flex flex-row justify-between'>
+              <div class="flex flex-row justify-between">
                 <figure class="flex flex-row justify-start">
                   <img
                     src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
@@ -160,13 +163,12 @@
             </div>
           </div>
 
-
           <!-- Collection Card -->
           <div class="card bg-neutral">
             <div class="card-body">
               <h2 class="card-title">Life hacks Collection</h2>
 
-              <div class='flex flex-row justify-between'>
+              <div class="flex flex-row justify-between">
                 <figure class="flex flex-row justify-start">
                   <img
                     src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
@@ -197,13 +199,12 @@
             </div>
           </div>
 
-
           <!-- Collection Card -->
           <div class="card bg-neutral">
             <div class="card-body">
               <h2 class="card-title">Life hacks Collection</h2>
 
-              <div class='flex flex-row justify-between'>
+              <div class="flex flex-row justify-between">
                 <figure class="flex flex-row justify-start">
                   <img
                     src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
@@ -233,15 +234,11 @@
               </div>
             </div>
           </div>
-
-
-
         </div>
-
 
         <!-- Trending -->
         <!-- Table with cols: Select (checkbox) | Subreddit name | # Users | Growth over day | Growth over week | Growth over month. Fill with dummy data upto 5 rows, unchecked -->
-        <div class='invisible'>
+        <div class="invisible">
           <table class="table w-full table-zebra">
             <thead>
               <tr>
@@ -258,48 +255,46 @@
                 <td><input type="checkbox" /></td>
                 <td>r/funny</td>
                 <td>10,000</td>
-                <td class='text-success'>+5%</td>
-                <td class='text-success'>+10%</td>
-                <td class='text-success'>+20%</td>
+                <td class="text-success">+5%</td>
+                <td class="text-success">+10%</td>
+                <td class="text-success">+20%</td>
               </tr>
               <tr>
                 <td><input type="checkbox" /></td>
                 <td>r/gaming</td>
                 <td>5,000</td>
-                <td class='text-success'>+2%</td>
-                <td class='text-success'>+5%</td>
-                <td class='text-success'>+15%</td>
+                <td class="text-success">+2%</td>
+                <td class="text-success">+5%</td>
+                <td class="text-success">+15%</td>
               </tr>
               <tr>
                 <td><input type="checkbox" /></td>
                 <td>r/movies</td>
                 <td>8,000</td>
-                <td class='text-success'>+3%</td>
-                <td class='text-error'>-8%</td>
-                <td class='text-success'>+25%</td>
+                <td class="text-success">+3%</td>
+                <td class="text-error">-8%</td>
+                <td class="text-success">+25%</td>
               </tr>
               <tr>
                 <td><input type="checkbox" /></td>
                 <td>r/music</td>
                 <td>12,000</td>
-                <td class='text-success'>+4%</td>
-                <td class='text-success'>+12%</td>
-                <td class='text-success'>+30%</td>
+                <td class="text-success">+4%</td>
+                <td class="text-success">+12%</td>
+                <td class="text-success">+30%</td>
               </tr>
               <tr>
                 <td><input type="checkbox" /></td>
                 <td>r/tech</td>
                 <td>9,000</td>
-                <td class='text-success'>+1%</td>
-                <td class='text-success'>+6%</td>
-                <td class='text-success'>+18%</td>
+                <td class="text-success">+1%</td>
+                <td class="text-success">+6%</td>
+                <td class="text-success">+18%</td>
               </tr>
             </tbody>
           </table>
         </div>
-
       </div>
-
     </div>
   </body>
 </html>
